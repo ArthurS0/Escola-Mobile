@@ -1,4 +1,4 @@
 # Documantação
-![DER](./dermer.png)
+![DER](./MerDer.png.png)
 
-![DCU](./dcu.png)
+![DCU](./DCU.png.png)

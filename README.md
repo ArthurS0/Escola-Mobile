@@ -39,14 +39,17 @@ npm install
 npm run dev
 ```
 
-## Prints
-![Screenshot 01](./docs/1.png)
-![Screenshot 02](./docs/2.png)
-![Screenshot 03](./docs/3.png)
-![Screenshot 04](./docs/4.png)
-![Screenshot 05](./docs/5.png)
-![Screenshot 06](./docs/6.png)
-![Screenshot 06](./docs/7.png)
+Prints:
+
+<img src="../docs/erro.png" alt="Print 1 - Estrutura do projeto" width="600">
+<br>
+<img src="../docs/sucesso.png" alt="Print 2 - Estrutura do projeto" width="600">
+<br>
+<img src="../docs/home.png" alt="Print 3 - Estrutura do projeto" width="600">
+<br>
+<img src="../docs/visualizar.png" alt="Print 4 - Estrutura do projeto" width="600">
+<br>
+<img src="../docs/cadastrar.png" alt="Print 5 - Estrutura do projeto" width="600">
 
 
 
