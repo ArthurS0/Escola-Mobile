@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button"
 import axios from 'axios'
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert'
 
-const uri = import.meta.env.VITE_API_URI || 'http://10.87.202.151:3000'
+const uri = import.meta.env.VITE_API_URI || 'http://localhost:3000'
 axios.defaults.baseURL = uri
 
 function Login() {
@@ -22,6 +22,7 @@ function Login() {
         if (status === 200) {
           setAlertData({ title: 'Sucesso', message: 'Login realizado com sucesso!' })
           window.localStorage.setItem('professor', JSON.stringify(response))
+          // Redireciona para /home após 1 segundo
           setTimeout(() => {
             navigate('/home')
           }, 1000)
@@ -38,15 +39,15 @@ function Login() {
   }
 
   return (
-    <main className="min-h-screen flex items-center justify-center p-4" style={{ backgroundColor: '#e6f0ff' }}>
+    <main className="min-h-screen flex items-center justify-center p-4">
       <form onSubmit={(e) => { e.preventDefault(); handleLogin(); }} className="w-full max-w-md">
-        <Card className="w-full border-blue-300 border-2 shadow-md">
+        <Card className="w-full">
           <CardHeader className='text-center'>
-            <CardTitle className="text-blue-700">Bem vindo</CardTitle>
+            <CardTitle>Bem vindo</CardTitle>
           </CardHeader>
           <CardContent className="space-y-4">
             {alertData && (
-              <Alert className="bg-blue-100 border-blue-300 text-blue-700">
+              <Alert>
                 <AlertTitle>{alertData.title}</AlertTitle>
                 <AlertDescription>{alertData.message}</AlertDescription>
               </Alert>
@@ -56,7 +57,7 @@ function Login() {
               placeholder="Email"
               value={email}
               onChange={(e: React.ChangeEvent<HTMLInputElement>) => setEmail(e.target.value)}
-              className="w-full border-blue-300 focus:ring-2 focus:ring-blue-400"
+              className="w-full"
               required
             />
             <Input
@@ -64,12 +65,10 @@ function Login() {
               placeholder="Senha"
               value={senha}
               onChange={(e: React.ChangeEvent<HTMLInputElement>) => setSenha(e.target.value)}
-              className="w-full border-blue-300 focus:ring-2 focus:ring-blue-400"
+              className="w-full"
               required
             />
-            <Button type="submit" className="w-full bg-blue-600 text-white hover:bg-blue-700 transition-colors duration-300">
-              Entrar
-            </Button>
+            <Button type="submit" className="w-full bg-red-500 text-black">Entrar</Button>
           </CardContent>
         </Card>
       </form>

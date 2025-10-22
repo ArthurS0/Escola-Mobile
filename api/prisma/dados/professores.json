@@ -1,17 +1,17 @@
 [
     {
-        "nome": "Robson Souza",
-        "email": "robson@gmail.com",
+        "nome": "Arthur Souza",
+        "email": "arthur@gmail.com",
         "senha": "12345"
     },
     {
-        "nome": "Wellington Silva",
-        "email": "welli@gmail.com",
+        "nome": "Helio Coronel",
+        "email": "helio@gmail.com",
         "senha": "12345"
     },
     {
-        "nome": "Luis Spoljaric",
-        "email": "luis@gmail.com",
+        "nome": "Diego Maradona",
+        "email": "diego@gmail.com",
         "senha": "12345"
     }
 ]

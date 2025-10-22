@@ -1,6 +1,6 @@
 [
     {
-        "nome": "Desenvolvimento de Sistemas",
+        "nome": "DS",
         "professorId": 1
     },
     {
@@ -19,13 +19,20 @@
         "nome": "Eletrônica Sala 02",
         "professorId": 2
     },
-
     {
-        "nome": "Eletricista Sala 01",
+        "nome": "Eletrômecanica Sala 01",
+        "professorId": 2
+    },
+    {
+        "nome": "Eletrômecanica Sala 02",
         "professorId": 3
     },
     {
-        "nome": "Eletricista Sala 02",
+        "nome": "Mecânico de Bombas Sala 01",
+        "professorId": 3
+    },
+    {
+        "nome": "Mecânico de Bombas Sala 02",
         "professorId": 3
     }
 ]

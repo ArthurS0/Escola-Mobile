@@ -1,43 +1,54 @@
-# Escola Api Mobile
+# Escola Mobile
+## Web gestão de atividades por professor
 
-## Tecnologias
+## Ambiente de desenvolvimento
 - Node.js
-- MySQL (XAMPP)
-- Prisma
+- MySQL (XAMPP- MariaDB)
+- Prisma ORM
 - React.js
 - Vite
 
-## Tutorial para executar API e Web
+## Passo a passo para executar o projeto localmente
 
-- Clone o repositorio e apos clonar entre na pasta `./web` e cole o seguintes comandos.
+1. Clone o repositório
+2. Configure o banco de dados MySQL
+3. Acesse a pasta web e instale as dependências
+```bash
+cd api
+npm install
+```
+4. Adicione o arquivo `.env` na raiz do projeto com a seguinte configuração:
+- Certifique-se de que o MySQL está em execução (usando XAMPP ou outro gerenciador)
 
+```js
+DATABASE_URL="mysql://root@localhost:3306/escola"
+```
+5. Execute as migrações do Prisma para configurar o banco de dados
+```bash
+npx prisma migrate dev --name init
+```
+6. Inicie o servidor de desenvolvimento
+```bash
+npm run dev
+```
+
+7. acesse a pasta do front end `./web` instale as dependências e inicie o servidor de desenvolvimento
 ```bash
 cd web
 npm install
 npm run dev
 ```
 
-Apos isso clique no link `http://localhost:5173/`.
+## Prints
+![Screenshot 01](./docs/1.png)
+![Screenshot 02](./docs/2.png)
+![Screenshot 03](./docs/3.png)
+![Screenshot 04](./docs/4.png)
+![Screenshot 05](./docs/5.png)
+![Screenshot 06](./docs/6.png)
+![Screenshot 06](./docs/7.png)
 
-- Logo depois desse processo abra outro CMD e entre dentro da pasta `./api` e cole os seguintes comandos.
 
-```bash
-npm install
-npx prisma migrate dev --name init
-npx nodemon
-```
-
-Agora voce pode testar o Back-End e Front-End do Projeto Escola Mobile
-
-## Wireframes e Diagramas
-
-![MerDER](./docs/MerDer.drawio.png)
-
-![](./docs/wireframes/Captura%20de%20tela%202025-10-22%20093412.png)
-![](./docs/wireframes/Captura%20de%20tela%202025-10-22%20093436.png)
-![](./docs/wireframes/Captura%20de%20tela%202025-10-22%20093443.png)
-![](./docs/wireframes/Captura%20de%20tela%202025-10-22%20093452.png)
-![](./docs/wireframes/Captura%20de%20tela%202025-10-22%20093458.png)
 
 
 

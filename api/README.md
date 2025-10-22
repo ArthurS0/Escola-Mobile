@@ -1,24 +1,40 @@
-## Tecnologias
+# API - Escola - Gestão de atividades e turmas
+## Tecnologias utilizadas
 - Node.js
-- MySQL (XAMPP)
-- Prisma
-- React.js
-- Vite
+- Express
+- MySQL (XAMPP MariaDB)
+- Prisma ORM
 
-## Tutorial para executar API 
-
-- Entre na pasta `./api` e cole os seguintes comandos.
-
+## Instalação e configuração
+1. Clone o repositório e instale as dependências:
 ```bash
+git clone <URL_DO_REPOSITORIO>
+cd <NOME_DO_REPOSITORIO>]
 npm install
+```
+1. Configure o banco de dados:
+- Instale o XAMPP e inicie o serviço do MySQL (MariaDB).
+- Crie o arquivo .env na raiz do projeto e adicione a string de conexão com o banco de dados:
+```js
+DATABASE_URL="mysql://root@localhost:3306/escola"
+```
+- Execute as migrações do Prisma para criar as tabelas no banco de dados:
+```bash
 npx prisma migrate dev --name init
-npx nodemon
+```
+1. Inicie o servidor:
+```bash
+npm run dev
 ```
 
-Agora voce pode testar o Back-End
+Prints:
 
-## Wireframes e Diagramas
-
-![MerDER](../docs/MerDer.drawio.png)
-
-
+<img src="../docs/erro.png" alt="Print 1 - Estrutura do projeto" width="600">
+<br>
+<img src="../docs/sucesso.png" alt="Print 2 - Estrutura do projeto" width="600">
+<br>
+<img src="../docs/home.png" alt="Print 3 - Estrutura do projeto" width="600">
+<br>
+<img src="../docs/visualizar.png" alt="Print 4 - Estrutura do projeto" width="600">
+<br>
+<img src="../docs/cadastrar.png" alt="Print 5 - Estrutura do projeto" width="600">

@@ -4,13 +4,13 @@ import { cva, type VariantProps } from "class-variance-authority"
 import { cn } from "@/lib/utils"
 
 const alertVariants = cva(
-  "relative w-full rounded-lg border p-4 [&>svg~*]:pl-7 [&>svg+div]:translate-y-[-3px] [&>svg]:absolute [&>svg]:left-4 [&>svg]:top-4 [&>svg]:text-foreground",
+  "relative w-full rounded-lg border p-4 flex items-start [&>svg~*]:pl-7 [&>svg+div]:translate-y-[-3px] [&>svg]:absolute [&>svg]:left-4 [&>svg]:top-4 [&>svg]:text-foreground",
   {
     variants: {
       variant: {
-        default: "bg-background text-foreground",
+        default: "bg-red-100 text-red-900 border-red-300 hover:bg-red-200 focus-visible:ring-2 focus-visible:ring-red-500",
         destructive:
-          "border-destructive/50 text-destructive dark:border-destructive [&>svg]:text-destructive",
+          "bg-red-700 text-white border-red-600 hover:bg-red-600 focus-visible:ring-2 focus-visible:ring-red-500 [&>svg]:text-red-500",
       },
     },
     defaultVariants: {
@@ -19,7 +19,7 @@ const alertVariants = cva(
   }
 )
 
-const Alert = React.forwardRef<
+const Alert = React.forwardRef< 
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement> & VariantProps<typeof alertVariants>
 >(({ className, variant, ...props }, ref) => (
@@ -33,24 +33,24 @@ const Alert = React.forwardRef<
 Alert.displayName = "Alert"
 
 const AlertTitle = React.forwardRef<
-  HTMLParagraphElement,
+  HTMLHeadingElement,
   React.HTMLAttributes<HTMLHeadingElement>
 >(({ className, ...props }, ref) => (
   <h5
     ref={ref}
-    className={cn("mb-1 font-medium leading-none tracking-tight", className)}
+    className={cn("mb-2 font-semibold text-lg leading-tight tracking-tight", className)}
     {...props}
   />
 ))
 AlertTitle.displayName = "AlertTitle"
 
-const AlertDescription = React.forwardRef<
+const AlertDescription = React.forwardRef< 
   HTMLParagraphElement,
   React.HTMLAttributes<HTMLParagraphElement>
 >(({ className, ...props }, ref) => (
   <div
     ref={ref}
-    className={cn("text-sm [&_p]:leading-relaxed", className)}
+    className={cn("text-sm text-gray-800 [&_p]:leading-relaxed", className)}
     {...props}
   />
 ))
