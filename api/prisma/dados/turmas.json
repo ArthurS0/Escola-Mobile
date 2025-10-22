@@ -1,0 +1,31 @@
+[
+    {
+        "nome": "Desenvolvimento de Sistemas",
+        "professorId": 1
+    },
+    {
+        "nome": "Mecatronica Sala 01",
+        "professorId": 1
+    },
+    {
+        "nome": "Mecatronica Sala 02",
+        "professorId": 1
+    },
+    {
+        "nome": "Eletrônica Sala 01",
+        "professorId": 2
+    },
+    {
+        "nome": "Eletrônica Sala 02",
+        "professorId": 2
+    },
+
+    {
+        "nome": "Eletricista Sala 01",
+        "professorId": 3
+    },
+    {
+        "nome": "Eletricista Sala 02",
+        "professorId": 3
+    }
+]
